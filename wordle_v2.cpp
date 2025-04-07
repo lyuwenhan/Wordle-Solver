@@ -175,17 +175,7 @@ inline void suggest(){
 int main(){
 	for(int i = 0; a[i] != ""; i++) aa.push_back(a[i]);
 	wo = aa;
-	int cc = 0;
 	while(cin >> s1){
-		cc++;
-		if(s1 == "return"){
-			system("cls");
-			c.clear();
-			for(int i = 0; i < 5; i++) v[i].clear();
-			fill(p, p + 200, 0);
-			for(int i = 0; i < 10; i++) fill(b[i], b[i] + 200, 0);
-			continue;
-		}
 		cin >> s2;
 		for(char i = 'a'; i <= 'z'; i++){
 			v[1].clear();
@@ -262,16 +252,14 @@ int main(){
 				cout << '	' << wo[i] << '\n';
 			}
 		}
-		if(cc >= 1){
-			if(wo.size() == v1.size()){
-				cout << "Nothing :)\n";
-				continue;
-			}
-			cout << "suggest words to narrow the range:\n";
-			suggest();
-			for(int i = 0; i < v1.size() && i < 5; i++){
-				cout << fixed << setprecision(3) << v1[i].second.second << "  (expectly elimination " << v1[i].second.first << " words)\n";
-			}
+		if(wo.size() == v1.size()){
+			cout << "Nothing :)\n";
+			continue;
+		}
+		cout << "suggest words to narrow the range:\n";
+		suggest();
+		for(int i = 0; i < v1.size() && i < 5; i++){
+			cout << fixed << setprecision(3) << v1[i].second.second << "  (expectly elimination " << v1[i].second.first << " words)\n";
 		}
 //		for(char i = 'a'; i <= 'z'; i++) cout << i << ' ';
 //		cout << '\n';
