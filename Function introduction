@@ -1,4 +1,10 @@
 I.v1
   It will give you the words that could be a answer
 II.v2
-  On the basis of a, it will also give you the words that may help you narrow down the answer word
+  On the basis of v1, it will also give you the words that may help you narrow down the answer word
+III.v3
+  Without modifying the logic of v2, the efficiently is observably accelerated
+IV.v4
+  The dictionary is completed in order to make the algorithm more effidently
+V.v5
+  Memoization function is added, so the efficiently is observably accelerated
