@@ -8,3 +8,5 @@ IV.v4
   The dictionary is completed in order to make the algorithm more effidently
 V.v5
   Memoization function is added, so the efficiently is observably accelerated
+VI.v1.5
+  the features is same as v1, but the dictionary is completed
