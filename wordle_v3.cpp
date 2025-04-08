@@ -56,7 +56,7 @@ string s1, s2;
 int b[10][26], p[26];
 vector<pair<long double, pair<long double, string>>> v1;
 
-// ÑÕÉ«·´À¡Éú³Éº¯Êı£¨"01230"£©
+// é¢œè‰²åé¦ˆç”Ÿæˆå‡½æ•°ï¼ˆ"01230"ï¼‰
 string compute_feedback(const string& guess, const string& correctword) {
     string result = "00000";
     string temp = correctword;
@@ -80,7 +80,7 @@ string compute_feedback(const string& guess, const string& correctword) {
     return result;
 }
 
-// elimination º¯Êı£¨Ïß³Ì°²È«£¬¾Ö²¿±äÁ¿Ìæ´ú£©
+// elimination å‡½æ•°ï¼ˆçº¿ç¨‹å®‰å…¨ï¼Œå±€éƒ¨å˜é‡æ›¿ä»£ï¼‰
 int elimination(const string &guess, const string &correctword, const int b_init[10][26], const int p_init[26]) {
     int bb[10][26], pp[26];
     memcpy(bb, b_init, sizeof(bb));
@@ -121,7 +121,7 @@ int elimination(const string &guess, const string &correctword, const int b_init
     return eliminated;
 }
 
-// µ¥Ïß³ÌÆÚÍûÖµ¼ÆËãº¯Êı
+// å•çº¿ç¨‹æœŸæœ›å€¼è®¡ç®—å‡½æ•°
 long double Expectedelimination(const string &guess) {
     int b_copy[10][26], p_copy[26];
     memcpy(b_copy, b, sizeof(b_copy));
@@ -134,7 +134,7 @@ long double Expectedelimination(const string &guess) {
     return total / wo.size();
 }
 
-// ÍÆ¼öºòÑ¡´Ê
+// æ¨èå€™é€‰è¯
 void suggest() {
     v1.clear();
     for (const string& i : aa) {
@@ -146,7 +146,6 @@ void suggest() {
 }
 
 int main() {
-    freopen("a.in", "r", stdin);
     for (int i = 0; a[i] != ""; ++i) aa.push_back(a[i]);
     wo = aa;
 
