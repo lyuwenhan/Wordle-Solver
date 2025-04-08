@@ -169,7 +169,6 @@ void suggest() {
 }
 
 int main() {
-	freopen("a.in", "r", stdin); 
     for (int i = 0; gu[i] != ""; ++i) aa.push_back(gu[i]);
     for (int i = 0; a[i] != ""; ++i) wo.push_back(a[i]);
 
