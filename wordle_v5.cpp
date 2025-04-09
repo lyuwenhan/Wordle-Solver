@@ -60,7 +60,7 @@ string s1, s2;
 int b[10][26], p[26], mem[250];
 vector<pair<long double, pair<long double, string>>> v1;
 
-// 颜色反馈生成函数（"01230"）
+// 脩脮脡芦路麓脌隆脡煤鲁脡潞炉脢媒拢篓"01230"拢漏
 //string compute_feedback(const string& guess, const string& correctword) {
 //    string result = "00000";
 //    string temp = correctword;
@@ -93,7 +93,7 @@ int ternary(const string &s2){
 	return r;
 }
 
-// elimination 函数（线程安全，局部变量替代）
+// elimination 潞炉脢媒拢篓脧脽鲁脤掳虏脠芦拢卢戮脰虏驴卤盲脕驴脤忙麓煤拢漏
 int elimination(const string &guess, const string &correctword, const int b_init[10][26], const int p_init[26]) {
     int bb[10][26], pp[26];
     memcpy(bb, b_init, sizeof(bb));
@@ -157,7 +157,7 @@ int elimination(const string &guess, const string &correctword, const int b_init
     return eliminated;
 }
 
-// 单线程期望值计算函数
+// 碌楼脧脽鲁脤脝脷脥没脰碌录脝脣茫潞炉脢媒
 long double Expectedelimination(const string &guess) {
     int b_copy[10][26], p_copy[26];
     memcpy(b_copy, b, sizeof(b_copy));
@@ -170,7 +170,7 @@ long double Expectedelimination(const string &guess) {
     return total / wo.size();
 }
 
-// 推荐候选词
+// 脥脝录枚潞貌脩隆麓脢
 void suggest() {
     v1.clear();
     for (const string& i : aa) {
@@ -232,7 +232,7 @@ int main() {
 
         cout << "possible words(amount:" << k << "):\n";
         k = 0;
-        for (int i = 0; i < wo.size() && k <= 10; ++i) {
+        for (int i = 0; i < wo.size() && k <= 15; ++i) {
             bool valid = true;
             bitset<26> q;
             for (int j = 0; j < 5; ++j) {
@@ -252,8 +252,8 @@ int main() {
 
         cout << "suggest words to narrow the range:\n";
         suggest();
-        for (int i = 0; i < v1.size() && i < 5; ++i) {
-            cout << fixed << setprecision(3) << v1[i].second.second << "  (expectly elimination " << v1[i].second.first << " words)\n";
+        for (int i = 0; i < v1.size() && i < 10; ++i) {
+            cout << fixed << setprecision(5) << v1[i].second.second << "  (expectly elimination " << v1[i].second.first << " words)\n";
         }
         cout << "Enter your input:";
     }
