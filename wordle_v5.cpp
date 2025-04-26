@@ -210,8 +210,8 @@ int main() {
         }
 
         for (int i = 0; i < aa.size(); ++i) {
-            bool valid = true;
-            for (int j = 0; j < 5; ++j) if (b[j][aa[i][j] - 'a']) valid = false;
+            bool valid = false;
+            for (int j = 0; j < 5 && !valid; ++j) if (!b[j][aa[i][j] - 'a']) valid = true;
             if (!valid) { swap(aa[i], aa.back()); aa.pop_back(); --i; }
         }
 
